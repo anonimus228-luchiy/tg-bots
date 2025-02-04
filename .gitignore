@@ -1,3 +1,5 @@
 .env
 __pycache__/
 .idea
+git config user.name "Umar221-gd"
+git config user.email "umarzairov568@gmail.com"

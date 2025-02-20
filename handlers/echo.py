@@ -1,112 +1,82 @@
-from aiogram import Bot, Dispatcher, types
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from decouple import config
+from aiogram import types, Dispatcher
 import random
-from config import bot, dp
+from config import bot
 
-
-quiz_data = [
-    {
-        "question": "Умеешь ли ты программировать?",
-        "answers": ["Да", "Нет", "Может быть"],
-        "correct": 0,
-    },
-    {
-        "question": "Какой язык используется в Aiogram?",
-        "answers": ["Python", "JavaScript", "C++"],
-        "correct": 0,
-    },
-    {
-        "question": "Что делает Aiogram?",
-        "answers": ["Создает сайты", "Работает с Telegram Bot API", "Запускает игры"],
-        "correct": 1,
-    }
-]
-
-
-async def start_quiz(message: types.Message):
-    await send_quiz(message.from_user.id, 0)
-
-
-async def send_quiz(chat_id, question_index):
-    if question_index >= len(quiz_data):
-        await bot.send_message(chat_id, "Викторина завершена! 🎉")
-        return
-
-    question = quiz_data[question_index]
-
-    keyboard = InlineKeyboardMarkup()
-    keyboard.add(InlineKeyboardButton("Далее", callback_data=f"next_{question_index + 1}"))
-
-    await bot.send_poll(
-        chat_id=chat_id,
-        question=question["question"],
-        options=question["answers"],
-        is_anonymous=False,
-        type='quiz',
-        correct_option_id=question["correct"],
-        explanation="Ответ в подсказке!",
-        reply_markup=keyboard
-    )
-
-
-@dp.callback_query_handler(lambda call: call.data.startswith("next_"))
-async def next_question(call: types.CallbackQuery):
-    question_index = int(call.data.split("_")[1])
-    await send_quiz(call.message.chat.id, question_index)
-    await call.answer()
-
-
-@dp.message_handler(commands=['dice'])
-async def roll_dice(message: types.Message):
-    await message.answer("Бросаем кость... 🎲")
-    await bot.send_dice(message.chat.id, emoji="🎲")
-
-
-games = ["⚽", "🎰", "🏀", "🎯", "🎳", "🎲"]
-
-
-@dp.message_handler(lambda message: "game" in message.text.lower())
-async def send_game(message: types.Message):
-    game = random.choice(games)
-    await bot.send_dice(message.chat.id, emoji=game)
-
-
-@dp.message_handler(commands=['play'])
-async def play_game(message: types.Message):
-    await message.answer("Ты бросаешь кость... 🎲")
-    user_dice = await bot.send_dice(message.chat.id, emoji="🎲")
-
-    await message.answer("Теперь бросает бот... 🎲")
-    bot_dice = await bot.send_dice(message.chat.id, emoji="🎲")
-
-    await bot.send_message(
-        message.chat.id,
-        determine_winner(user_dice.dice.value, bot_dice.dice.value)
-    )
-
-
-def determine_winner(user_score, bot_score):
-    if user_score > bot_score:
-        return "Ты победил! 🏆"
-    elif user_score < bot_score:
-        return "Бот победил! 🤖"
-    else:
-        return "Ничья! 🔥"
-
+# Эмодзи для игр
+GAME_EMOJI = ["⚽", "🎰", "🏀", "🎯", "🎳", "🎲"]
 
 async def echo_handler(message: types.Message):
-    await message.answer(message.text)
+    """
+    Эхо-обработчик для всех остальных сообщений
+    """
+    try:
+        # Пробуем преобразовать текст в число и вернуть его квадрат
+        number = float(message.text)
+        await message.answer(f"{number} в квадрате = {number ** 2}")
+    except ValueError:
+        # Если не получилось преобразовать в число, отправляем текст обратно
+        await message.answer(message.text)
+    except Exception as e:
+        await message.answer("Произошла ошибка при обработке сообщения.")
+        print(f"Error in echo_handler: {e}")
 
+async def dice_handler(message: types.Message):
+
+    try:
+        await message.answer("🎲 Бросаем кубик...")
+        dice_message = await bot.send_dice(message.chat.id, emoji="🎲")
+        dice_value = dice_message.dice.value
+        await message.answer(f"Выпало число {dice_value}!")
+    except Exception as e:
+        await message.answer("Произошла ошибка при броске кубика.")
+        print(f"Error in dice_handler: {e}")
+
+async def play_game(message: types.Message):
+    """
+    Обработчик команды /play - игра с ботом
+    """
+    try:
+        await message.answer("Ты бросаешь кубик... 🎲")
+        user_dice = await bot.send_dice(message.chat.id, emoji="🎲")
+        user_value = user_dice.dice.value
+        
+        await message.answer("Бот бросает кубик... 🎲")
+        bot_dice = await bot.send_dice(message.chat.id, emoji="🎲")
+        bot_value = bot_dice.dice.value
+        
+        # Определяем победителя
+        if user_value > bot_value:
+            result = "Ты победил! 🏆"
+        elif user_value < bot_value:
+            result = "Бот победил! 🤖"
+        else:
+            result = "Ничья! 🤝"
+        
+        await message.answer(f"\nТвой бросок: {user_value}\nБросок бота: {bot_value}\n\n{result}")
+    except Exception as e:
+        await message.answer("Произошла ошибка в игре.")
+        print(f"Error in play_game: {e}")
+
+async def random_game(message: types.Message):
+    """
+    Обработчик для случайной мини-игры
+    """
+    try:
+        game = random.choice(GAME_EMOJI)
+        await message.answer(f"Играем в {game}")
+        await bot.send_dice(message.chat.id, emoji=game)
+    except Exception as e:
+        await message.answer("Произошла ошибка при запуске игры.")
+        print(f"Error in random_game: {e}")
 
 def register_handlers(dp: Dispatcher):
-    dp.register_message_handler(echo_handler)
-    dp.register_message_handler(start_quiz, commands=['quiz'])
-    dp.register_message_handler(roll_dice, commands=['dice'])
-    dp.register_message_handler(send_game, lambda message: "game" in message.text.lower())
+    """
+    Регистрация обработчиков
+    """
+    # Игровые команды
+    dp.register_message_handler(dice_handler, commands=['dice'])
     dp.register_message_handler(play_game, commands=['play'])
-    dp.register_callback_query_handler(next_question, lambda call: call.data.startswith("next_"))
-
-
-
-
+    dp.register_message_handler(random_game, lambda msg: msg.text.lower() == 'game')
+    
+    # Эхо-обработчик должен быть последним
+    dp.register_message_handler(echo_handler)

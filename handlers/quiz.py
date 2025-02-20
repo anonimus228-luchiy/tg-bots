@@ -4,7 +4,6 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import bot
 
 
-
 async def quiz(message: types.Message):
     keyboard = InlineKeyboardMarkup()
     button = InlineKeyboardButton('Далее', callback_data='button_1')
@@ -15,6 +14,8 @@ async def quiz(message: types.Message):
 
     answer = ['Лето', "зима", 'осень', "весна"]
 
+    with open('media/test.jpg', 'rb') as photo:
+        await bot.send_photo(chat_id=message.from_user.id, photo=photo)
 
 
     await bot.send_poll(
@@ -30,7 +31,7 @@ async def quiz(message: types.Message):
     )
 
 
-async def quiz_2(call: types.CallbackQuery):
+async def qyuz_2(call: types.CallbackQuery):
     question = 'Dota2 or CS.GO'
     answer = ['Dota2', 'CS.GO', 'Valve']
 
@@ -45,4 +46,4 @@ async def quiz_2(call: types.CallbackQuery):
 
 def register_handlers(dp: Dispatcher):
     dp.register_message_handler(quiz, commands=['quiz'])
-    dp.register_callback_query_handler(quiz_2, text='button_1')
+    dp.register_callback_query_handler(qyuz_2, text='button_1')

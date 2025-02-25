@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="66db7900-1c39-43b3-8992-170fa1417a28" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buttons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.sqlite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/main_db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/queries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/db/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/db/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/db/main_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/db/main_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/db/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/db/queries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/handlers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/handlers/store_fsm.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/handlers/store_fsm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_50_2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_50_2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/echo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/fsm_reg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/quiz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/shop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/store_fsm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework3_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework3_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework3_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework3_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/states.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.venv/.gitignore" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/decouple.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2sXLsL0YWPTXgDtKyGNeqP29MBG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.homework3_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework3_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework3_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework3_4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\pythonProject4" />
+      <recent name="C:\Users\user\PycharmProjects\pythonProject4\group_50_2\handlers" />
+      <recent name="C:\Users\user\PycharmProjects\pythonProject4\handlers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="homework3_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework3_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="homework3_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework3_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="homework3_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework3_4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/group_50_2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/group_50_2/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.homework3_4" />
+        <item itemvalue="Python.homework3_3" />
+        <item itemvalue="Python.homework3_2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66db7900-1c39-43b3-8992-170fa1417a28" name="Changes" comment="" />
+      <created>1738597178165</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738597178165</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+</project>

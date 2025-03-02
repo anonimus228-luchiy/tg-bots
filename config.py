@@ -7,4 +7,4 @@ bot = Bot(token=BOT_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
-ADMINS = [1234567890]  # Replace with your actual Telegram ID
+ADMINS = [7041912200,]
